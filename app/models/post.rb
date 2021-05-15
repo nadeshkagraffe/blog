@@ -5,6 +5,6 @@ class Post < ApplicationRecord
     before_save :censurate
 
     def censurate
-        self.content = self.content.gsub("divulgar", "")
+        self.content = self.content.gsub("fea", "xxx")
     end
 end
