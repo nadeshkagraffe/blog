@@ -1,0 +1,25 @@
+<div class="container mt-5">
+  <% if @post.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@post.errors.count, "error") %> prohibited this post from
+      being saved:
+    </h2>
+    <ul>
+      <% @post.errors.full_messages.each do |messeages| %>
+      <li><%= messeages %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% else %>
+  <h2 class="h1 text-center text-light bg-dark border border-info">
+    ¡Post created successfully!
+  </h2>
+  <div class="mr-5 text-center mt-3">
+    <a class="btn btn-lg btn-info" href="<%=posts_index_path%>" role="button"
+      >Go Post</a
+    >
+  </div>
+  <% end %>
+</div>
+

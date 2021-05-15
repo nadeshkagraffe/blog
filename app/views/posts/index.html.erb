@@ -1,0 +1,15 @@
+<h1>Datos Guardados</h1>
+<div class="container row ml-2"></div>
+    <% @post.each do |po|%>
+        <div class="card-deck">
+        <div class="card">
+            <a><img class="card-img-top" src="<%= po.image%>" alt="image" /></a>
+            <div class="card-body">
+                <h2 class="card-title"><%= po.title %></h2>
+                <p class="card-text"><%=po.content%></p>
+                <p class="card-text"><%=po.created_at%></p>
+            </div>
+        </div>
+        </div>
+    <%end%>
+</div>
